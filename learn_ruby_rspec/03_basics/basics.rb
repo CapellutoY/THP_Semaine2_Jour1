@@ -25,5 +25,9 @@ end
 array_42([1, 2, 3, 4, 5, 6, 7 , 8, 9, 21, 10.5])
 
 def magic_array(arrays)
-  
+  magic= arrays.flatten.sort.uniq
+  magic2 = magic.map { |e|  e*2}
+  magic3 = magic2.reject! {|e| e%3 == 0 }
+  p magic3
 end
+magic_array([[32, 54], [48, 12], [21, [1, 2, [3]]], 7, 8])
